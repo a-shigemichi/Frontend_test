@@ -31,18 +31,18 @@ describe("数値の検証", () => {
     expect(value).toEqual(4);
   });
   test("検証値 は 期待値 より大きい", () => {
-    expect(value).toBeGreaterThan(3); // 4 > 3
-    expect(value).toBeGreaterThanOrEqual(4); // 4 >= 4
+    expect(value).toBeGreaterThan(3);
+    expect(value).toBeGreaterThanOrEqual(4);
   });
   test("検証値 は 期待値 より小さい", () => {
-    expect(value).toBeLessThan(5); // 4 < 5
-    expect(value).toBeLessThanOrEqual(4); // 4 <= 4
+    expect(value).toBeLessThan(5);
+    expect(value).toBeLessThanOrEqual(4);
   });
   test("小数計算は正確ではない", () => {
     expect(0.1 + 0.2).not.toBe(0.3);
   });
   test("小数計算の指定桁までを比較する", () => {
-    expect(0.1 + 0.2).toBeCloseTo(0.3); // デフォルトは 2桁
+    expect(0.1 + 0.2).toBeCloseTo(0.3);
     expect(0.1 + 0.2).toBeCloseTo(0.3, 15);
     expect(0.1 + 0.2).not.toBeCloseTo(0.3, 16);
   });
